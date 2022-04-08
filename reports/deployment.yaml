@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reportingApp
+  name: reporting-app
 spec:
   selector:
     matchLabels:
-      app: reportingApp
+      app: reporting-app
   replicas: 2
   template:
     metadata:
       labels:
-        app: reportingApp
+        app: reporting-app
     spec:
       containers:
-      - name: reportingApp
+      - name: reporting-app
         image: report-service:latest
         ports:
         - containerPort: 9010
