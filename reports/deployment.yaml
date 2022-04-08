@@ -16,4 +16,4 @@ spec:
       - name: reportingApp
         image: report-service:latest
         ports:
-        - containerPort: 9010
+        - containerPort: 9020
