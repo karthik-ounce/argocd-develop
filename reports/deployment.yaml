@@ -15,5 +15,6 @@ spec:
       containers:
       - name: reporting-app
         image: report-service:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9010
