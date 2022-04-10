@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-app
+spec:
+  selector:
+    matchLabels:
+      app: gateway-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: gateway-app
+    spec:
+      containers:
+      - name: gateway-app
+        image: gateway-service:latest
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: JAVA_OPTS
+          value: >-
+                -server -Xms4g -Xmx4g -XX:+DisableExplicitGC -XX:+UseG1GC -XX:ParallelGCThreads=36 -XX:MaxGCPauseMillis=200 -XX:ConcGCThreads=18 -XX:+HeapDumpOnOutOfMemoryError
+        - name: PASS
+          value: 71aWdf6289erwadfes2345
+        ports:
+        - containerPort: 9020
