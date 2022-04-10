@@ -19,7 +19,7 @@ spec:
         env:
         - name: JAVA_OPTS
           value: >-
-                -server -Xms4g -Xmx4g -XX:+DisableExplicitGC -XX:+UseG1GC -XX:ParallelGCThreads=36 -XX:MaxGCPauseMillis=200 -XX:ConcGCThreads=18 -XX:+HeapDumpOnOutOfMemoryError -Djasypt.encryptor.password=71aWdf6289erwadfes2345
+                -server -Xms4g -Xmx4g -XX:+DisableExplicitGC -XX:+UseG1GC -XX:ParallelGCThreads=36 -XX:MaxGCPauseMillis=200 -XX:ConcGCThreads=18 -XX:+HeapDumpOnOutOfMemoryError -Djasypt.encryptor.password=71aWdf6289erwadfes2345 -Debs.url=
         - name: PASS
           value: 71aWdf6289erwadfes2345
         ports:
